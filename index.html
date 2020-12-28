@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sort Visualiser</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Sorting Visualiser</a>
+<!--     <a class="navbar-brand" href="#">Use Bubble Sort</a>
+     <a class="navbar-brand" href="#">Use Insertion Sort</a> -->
+  </div>
+</nav>
+<h4 class="text-center"><!-- Selection Sort-O(n<sup>2</sup>) --></h4>
+  <div id="root">
+  	
+  </div>
+  <br>
+
+  <div id="key1">
+  	<div class="keyitem"><h2 style="color: #f1c40f">&#9632; new minimum</h2></div>
+  	<div class="keyitem"><h2 style="color: grey">&#9632; current minimum</h2></div>
+  </div>
+
+  <div id="key2">
+  	<div class="keyitem"><h2 style="color: lightgrey">&#9632; current items</h2></div>
+  </div>
+
+  <h5 style="margin-left: 5%;">Enter number of elements here</h5>
+ <input type="number" id="num_elements" class="elements_input form-control"  name="" value="20">
+ <h5 style="margin-left: 5%;">Choose Sorting Algorithm</h5>
+ <select class="form-control elements_input" name="selection" id="algo">
+    <option value="selection">Selection Sort</option>
+<!--     <option value="insertion">Insertion Sort</option> -->
+    <option value="bubble">Optimized Bubble Sort</option>
+  </select>
+  <br>
+ <button id="startbutton" onclick="start()" type="button" class="elements_input btn btn-primary">Start Sorting</button>
+
+  <style type="text/css">
+  	.elements_input{
+  		 width: 90%;
+  		margin-left: 5%;
+  		margin-right: 5%;
+  	}
+  	#key1{
+  		margin-left: 5%;
+      display: none;
+  	}
+    #key2{
+      margin-left: 5%;
+      display: none;
+    }
+
+
+
+  	#root{
+  		width: 90%;
+  		margin-left: 5%;
+  		margin-right: 5%;
+  	}
+
+  	.bar{
+  		background-color: #34495e;
+  		display:inline-block;
+  		border:1px solid white;
+  		color: red;
+  		font-size: 11px;
+  		font-weight: 700;
+  	}
+  </style>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
