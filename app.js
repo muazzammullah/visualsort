@@ -14,7 +14,7 @@ async function bubblesort(a){
                     a[j]=a[j+1];
                     a[j+1]=temp
                 }
-                await(sleep(60));
+                await(sleep(2));
                 draw(a,sorted);
         }
         element_last_sorted=a.length-1-i;
@@ -27,7 +27,7 @@ async function bubblesort(a){
 
 async function selsort(a){
     document.getElementById("key1").style.display="inline-block";
-    document.getElementById("key2").style.display="none";     
+    document.getElementById("key2").style.dis2ay="none";     
     var sorted=[];
     for(j=0;j<a.length;j++){
         //set min index to current j
@@ -48,7 +48,7 @@ async function selsort(a){
                   document.getElementById('bar_'+x).style.color = 'red';
                 }  
             }
-            await(sleep(60));
+            await(sleep(2));
             document.getElementById('bar_'+i).style.backgroundColor = '#34495e';
         }
         //keep current minimum as placeholder variable       
@@ -81,7 +81,7 @@ function draw(arr_to_sort,sorted){
 	}
     document.getElementById("root").innerHTML="";
     for(y=0;y<arr_to_sort.length;y++){
-			document.getElementById("root").innerHTML+="<div id='bar_"+y+"' class='bar' style='height:"+(4 *arr_to_sort[y])+"px;width:"+(100/arr_to_sort.length).toString()+"%'>"+arr_to_sort[y]+"</div>";
+			document.getElementById("root").innerHTML+="<div id='bar_"+y+"' class='bar' style='height:"+(4 *arr_to_sort[y])+"px;width:"+(100/arr_to_sort.length).toString()+"%'>&nbsp;</div>";
     }
     console.log(sorted);
     try{
@@ -114,7 +114,7 @@ function startvisualiser(num_elements){
 
 //selsort([1,5,4,3,2]);
 function start(){
-    if(document.getElementById("num_elements").value>20){
+    if(document.getElementById("num_elements").value>50){
         alert("you may encounter issues when handling more than 20 elements,please use 20 or less elements");
     }
     else{
