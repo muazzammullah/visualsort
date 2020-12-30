@@ -115,7 +115,7 @@ function startvisualiser(num_elements){
 //selsort([1,5,4,3,2]);
 function start(){
     if(document.getElementById("num_elements").value>50){
-        alert("you may encounter issues when handling more than 20 elements,please use 20 or less elements");
+        alert("you may encounter issues when handling more than 50 elements,please use 50 or less elements");
     }
     else{
         startvisualiser(document.getElementById("num_elements").value); 
